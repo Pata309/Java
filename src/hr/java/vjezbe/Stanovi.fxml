@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.vjezbe.StanoviController">
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Pretrazivanje stanova" textAlignment="CENTER" />
+            <HBox alignment="TOP_CENTER">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Naslov:" textAlignment="RIGHT">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="naslovStanaTextField" alignment="CENTER_RIGHT" />
+               </children>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="TOP_CENTER">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Opis:" textAlignment="RIGHT">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="opisStanaTextField" alignment="CENTER_RIGHT" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Kvadratura:" textAlignment="RIGHT">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="kvadraturaStanaTextField" alignment="CENTER_RIGHT" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Cijena:" textAlignment="RIGHT">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="cijenaStanaTextField" alignment="CENTER_RIGHT" />
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#pretrazi" text="Pretrazi" />
+            <TableView fx:id="stanoviTableView" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="naslovColumn" prefWidth="75.0" text="Naslov" />
+                <TableColumn fx:id="opisColumn" prefWidth="75.0" text="Opis" />
+                  <TableColumn fx:id="kvadraturaColumn" prefWidth="75.0" text="Kvadratura" />
+                  <TableColumn fx:id="cijenaColumn" prefWidth="75.0" text="Cijena" />
+                  <TableColumn fx:id="stanjeColumn" prefWidth="75.0" text="Stanje" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
